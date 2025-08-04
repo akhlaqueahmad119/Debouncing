@@ -67,17 +67,17 @@ function Search() {
             </tr>
           </thead>
           <tbody>
-            {searchData.length > 0 &&
-              searchData.map((item) => (
-                <tr key={item.id}>
-                  <td>{item.id}</td>
-                  <td>{item.email}</td>
-                  <td>{item.phone}</td>
-                  <td>{item.username}</td>
-                  <td>{item.website}</td>
-                </tr>
-              ))}
+            {searchData.map((item) => (
+              <tr key={item.id}>
+                <td data-label="Id">{item.id}</td>
+                <td data-label="Email">{item.email}</td>
+                <td data-label="Phone">{item.phone}</td>
+                <td data-label="User Name">{item.username}</td>
+                <td data-label="Website">{item.website}</td>
+              </tr>
+            ))}
           </tbody>
+
         </table>)
       }
     </div>

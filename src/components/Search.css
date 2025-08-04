@@ -12,6 +12,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
   margin-bottom: 30px;
+  font-size: 28px;
 }
 
 .search-input {
@@ -47,16 +48,63 @@
 
 .styled-table th,
 .styled-table td,
-h3,p {
+h3,
+p {
   padding: 14px 18px;
   border-bottom: 1px solid #ddd;
-background-color: #101316;
+  background-color: #101316;
+  color: white;
+  word-break: break-word;
 }
 
 .styled-table tr:nth-child(even) {
-background-color: #01060b;
+  background-color: #01060b;
 }
-/* 
-.styled-table tr:hover {
-  background-color: #e6f0ff;
-} */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-container {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .styled-table {
+    font-size: 13px;
+  }
+
+  .styled-table thead {
+    display: none; /* Hide table head on mobile */
+  }
+
+  .styled-table tbody tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #101316;
+  }
+
+  .styled-table tbody tr td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border: none;
+    background-color: transparent;
+  }
+
+  .styled-table tbody tr td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #ccc;
+  }
+}
